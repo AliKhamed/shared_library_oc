@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String githubToken, String imageName, String gitUserEmail, String gitUserName, String gitRepoName, String githubFilePath) {
+def call(String githubToken, String imageName, String gitUserEmail, String gitUserName, String gitRepoName) {
 
     withCredentials([string(credentialsId: "${githubToken}", variable: 'GITHUB_TOKEN')]) {
                 sh '''
